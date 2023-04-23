@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="userList_db" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8465b506-6691-4921-b679-586dd088af23">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="report_db"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from tb_user]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_user"/>
+	</field>
+	<field name="user_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="user_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_user"/>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_user"/>
+	</field>
+	<field name="hire_date" class="java.util.Date">
+		<property name="com.jaspersoft.studio.field.label" value="hire_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_user"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="10" width="100" height="30" uuid="e5ba088e-c4c0-40cf-aa46-eb6247b4a1b4"/>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋" size="18"/>
+				</textElement>
+				<text><![CDATA[用户信息]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="8d1d879f-720f-4566-9287-e182dd565a70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5930c9b0-a260-4a56-acc5-d5729271d724"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<text><![CDATA[编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="b10e026f-ab8c-4af4-b468-913148a3a6b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa379cac-5b52-4111-b864-5e5f821f9d0d"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<text><![CDATA[用户名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="0" width="100" height="30" uuid="b936d2f6-2670-4429-aa4e-fe7166de704a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7d42608d-aa66-4fa1-86c6-50630e4a8d4f"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<text><![CDATA[电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="100" height="30" uuid="47caa344-4e77-413c-bd16-e8f5851175a9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="737df361-0d95-48a5-bedb-d68587af6df5"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<text><![CDATA[入职日期]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="8e4c1793-693b-4bb8-8734-a7b13afce547">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5930c9b0-a260-4a56-acc5-d5729271d724"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="100" height="30" uuid="2e2c9b2e-5e13-4436-949c-72d85c21f752">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa379cac-5b52-4111-b864-5e5f821f9d0d"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="-1" width="100" height="30" uuid="ace961d5-d965-4dbc-bb74-151ca04689dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="737df361-0d95-48a5-bedb-d68587af6df5"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hire_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="-1" width="100" height="30" uuid="fff5e8d9-37a2-40ad-80b9-e2dbd86f02b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7d42608d-aa66-4fa1-86c6-50630e4a8d4f"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="仿宋"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

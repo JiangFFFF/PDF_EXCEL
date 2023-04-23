@@ -9,7 +9,7 @@ import java.util.Map;
 
 public interface UserMapper extends Mapper<User> {
 
-    @Select(value = "select dept_name deptName,count(u.id) num from tb_dept d LEFT JOIN tb_user u on  d.id=u.dept_id GROUP BY dept_name")
+    @Select(value = "select dept_name deptName,count(u.id) num,count(u.id) test from tb_dept d LEFT JOIN tb_user u on  d.id=u.dept_id GROUP BY dept_name")
 //    @ResultType(Map.class)
     List<Map> columnCharts();
 
